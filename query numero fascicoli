@@ -1,0 +1,8 @@
+SELECT 
+    YEAR(data_arrivo) AS anno, 
+    QUARTER(data_arrivo) AS trimestre, 
+    COUNT(*) AS numero_fascicoli
+FROM 
+    fascicoli
+GROUP BY 
+    anno, trimestre;
