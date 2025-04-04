@@ -1,0 +1,12 @@
+CREATE TABLE fascicoli (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    data_arrivo DATE NOT NULL,
+    ufficio_richiedente VARCHAR(255) NOT NULL,
+    riferimento_procedimento VARCHAR(255) NOT NULL,
+    data_relazione_preliminare DATE NOT NULL,
+    data_consegna_materiale DATE NOT NULL,
+    data_inizio_operazioni DATE NOT NULL,
+    data_relazione_finale DATE NOT NULL,
+    nome_operatore INT,
+    FOREIGN KEY (nome_operatore) REFERENCES operatori(id)
+);
