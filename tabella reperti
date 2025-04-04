@@ -1,0 +1,10 @@
+CREATE TABLE reperti (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_fascicolo INT,
+    mobile_phone INT DEFAULT 0,
+    pc INT DEFAULT 0,
+    sim_card INT DEFAULT 0,
+    hard_disk INT DEFAULT 0,
+    altro INT DEFAULT 0,
+    FOREIGN KEY (id_fascicolo) REFERENCES fascicoli(id)
+);
