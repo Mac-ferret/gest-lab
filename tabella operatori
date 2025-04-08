@@ -1,4 +1,0 @@
-CREATE TABLE operatori (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome_operatore VARCHAR(255) NOT NULL
-);
