@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Benvenuto - Archivio Fascicoli</title>
+    <style>
+        body {
+            background-color: #f2f6fa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        img {
+            width: 200px;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+
+        .icon {
+            color: #1f4e79;
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .button {
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #1f4e79;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: background-color 0.8s ease, transform 0.7s ease;
+        }
+
+        .button:hover {
+            background-color: #163d5c;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Stemma Polizia -->
+    <img src="{{ url_for('static', filename='img/stemma_polizia.png') }}" alt="Stemma Polizia">
+
+    <!-- Icona animata sotto lo stemma -->
+    <i data-lucide="shield" class="icon" width="40" height="40"></i>
+
+    <!-- Pulsante per entrare -->
+    <a href="{{ url_for('index') }}" class="button">
+        Entra
+        <i data-lucide="arrow-right-circle"></i>
+    </a>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
